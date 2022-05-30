@@ -227,8 +227,8 @@
                   <Table columnCount="10" rowCount="0">
                     <Column editable="false" title="id" type="java.lang.Object"/>
                     <Column editable="false" title="name" type="java.lang.Object"/>
-                    <Column editable="false" title="author" type="java.lang.Object"/>
-                    <Column editable="false" title="publisher" type="java.lang.Object"/>
+                    <Column editable="false" title="musician" type="java.lang.Object"/>
+                    <Column editable="false" title="singer" type="java.lang.Object"/>
                     <Column editable="false" title="subCategoryName" type="java.lang.Object"/>
                     <Column editable="true" title="unitBuyPrice" type="java.lang.Object"/>
                     <Column editable="true" title="unitSellPrice" type="java.lang.Object"/>

@@ -67,7 +67,6 @@ public class LoginPage extends javax.swing.JFrame {
         }catch(Exception e){
             e.printStackTrace();
         }
-        
     }
     
   

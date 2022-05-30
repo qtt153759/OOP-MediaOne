@@ -35,6 +35,8 @@ public class HomePage extends javax.swing.JFrame {
     DefaultTableModel model; // 
     JPanel current; // Panel hiện tại
     Product productPanel=new Product();
+    Onlybook bookPanel= new Onlybook();
+    Onlymusic musicPanel= new Onlymusic();
     
     // Constructor
     public HomePage() {
@@ -47,7 +49,13 @@ public class HomePage extends javax.swing.JFrame {
         product.add(productPanel);
         product.setVisible(false);
         
+        bookPanel.setSize(1314, 811);
+        book.add(bookPanel);
+        book.setVisible(false);
         
+        musicPanel.setSize(1314, 811);
+        music.add(musicPanel);
+        music.setVisible(false);
         
         current = this.home;
         current.setVisible(true);
@@ -94,6 +102,8 @@ public class HomePage extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         product = new javax.swing.JPanel();
+        book = new javax.swing.JPanel();
+        music = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -210,6 +220,11 @@ public class HomePage extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(153, 153, 153));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Books_26px.png"))); // NOI18N
         jLabel9.setText("  Sách");
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
         jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         jPanel3.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 240, 50));
@@ -254,6 +269,11 @@ public class HomePage extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(153, 153, 153));
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Sell_26px.png"))); // NOI18N
         jLabel11.setText("Đĩa nhạc");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
         jPanel10.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 240, 50));
@@ -381,6 +401,34 @@ public class HomePage extends javax.swing.JFrame {
 
         panelMain.add(product, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 66, 1310, 1000));
 
+        javax.swing.GroupLayout bookLayout = new javax.swing.GroupLayout(book);
+        book.setLayout(bookLayout);
+        bookLayout.setHorizontalGroup(
+            bookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1310, Short.MAX_VALUE)
+        );
+        bookLayout.setVerticalGroup(
+            bookLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+        );
+
+        panelMain.add(book, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 66, 1310, 1000));
+
+        music.setPreferredSize(new java.awt.Dimension(1310, 1000));
+
+        javax.swing.GroupLayout musicLayout = new javax.swing.GroupLayout(music);
+        music.setLayout(musicLayout);
+        musicLayout.setHorizontalGroup(
+            musicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1310, Short.MAX_VALUE)
+        );
+        musicLayout.setVerticalGroup(
+            musicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+        );
+
+        panelMain.add(music, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 66, 1310, 1000));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -481,13 +529,11 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel8MouseEntered
 
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
-
         current.setVisible(false);
         current = book;
         current.repaint();
         current.revalidate();
         current.setVisible(true);
-
     }//GEN-LAST:event_jPanel8MouseClicked
 
     private void jPanel6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseReleased
@@ -535,6 +581,20 @@ public class HomePage extends javax.swing.JFrame {
         current = product;
         current.setVisible(true);        // TOoductDO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        current.setVisible(false);
+        current = book;
+        current.setVisible(true);
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        // TODO add your handling code here:
+        current.setVisible(false);
+        current = music;
+        current.setVisible(true);
+    }//GEN-LAST:event_jLabel11MouseClicked
     int xx = 0;    int x = 240;    int xxx = 0;
     /**
      * @param args the command line arguments
@@ -574,6 +634,7 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel book;
     private javax.swing.JLabel helloName;
     private javax.swing.JPanel home;
     private javax.swing.JLabel jLabel1;
@@ -601,6 +662,7 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel music;
     private javax.swing.JPanel panelMain;
     private javax.swing.JPanel product;
     // End of variables declaration//GEN-END:variables

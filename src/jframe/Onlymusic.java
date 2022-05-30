@@ -22,33 +22,33 @@ import swing.PanelSearch;
  *
  * Panel to borrow book
  */
-public class Onlybook extends javax.swing.JPanel {
+public class Onlymusic extends javax.swing.JPanel {
     
         DefaultTableModel model;
     //Contructor
-    public Onlybook() {
+    public Onlymusic() {
         initComponents();
-        this.setBookToTable();
+        this.setMusicToTable();
 
     }
-    public void setBookToTable( ){
+    public void setMusicToTable( ){
         try{
             Connection con = DBConnection.getConnection();
-            String sql="select b.id as id, p.name as name, b.publisher as publisher, b.author as author, sc.name as subCategoryName, ps.unitBuyPrice as unitBuyPrice, ps.unitSellPrice as unitSellPrice, ps.totalBuyPrice as totalBuyPrice, ps.totalSellPrice as totalSellPrice,  ps.totalStock as totalStock from bookinfor as b left join products as p on (p.id = b.productId) left join subCategories as sc on (sc.id=p.subCategoryId) left join productStocks as ps on (ps.productId=p.id);";
+            String sql="select m.id as id, p.name as name, m.musican as musican, m.singer as singer, sc.name as subCategoryName, ps.unitBuyPrice as unitBuyPrice, ps.unitSellPrice as unitSellPrice, ps.totalBuyPrice as totalBuyPrice, ps.totalSellPrice as totalSellPrice, ps.totalStock as totalStock from musicinfor as m left join products as p on (p.id = m.productId) left join subCategories as sc on (sc.id=p.subCategoryId) left join productStocks as ps on (ps.productId=p.id);";
             java.sql.Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             while(rs.next()){
                 String id = rs.getString("id") ;
                 String name = rs.getString("name");
-                String author = rs.getString("author");
-                String publisher = rs.getString("publisher");
+                String musican = rs.getString("musican");
+                String singer = rs.getString("singer");
                 String subCategoryName = rs.getString("subCategoryName");
                 String totalStock=rs.getString("totalStock");
                 String unitBuyPrice=rs.getString("unitBuyPrice");
                 String unitSellPrice=rs.getString("unitSellPrice");
                 String totalBuyPrice=rs.getString("totalBuyPrice");
                 String totalSellPrice=rs.getString("totalSellPrice");
-                Object obj[] = {id, name, author, publisher, subCategoryName,unitBuyPrice,unitSellPrice,totalBuyPrice,totalSellPrice,totalStock};
+                Object obj[] = {id, name, musican, singer, subCategoryName,unitBuyPrice,unitSellPrice,totalBuyPrice,totalSellPrice,totalStock};
                 model = (DefaultTableModel) productTable.getModel();
                 model.addRow(obj);
                 
@@ -176,7 +176,7 @@ public class Onlybook extends javax.swing.JPanel {
 
             },
             new String [] {
-                "id", "name", "author", "publisher", "subCategoryName", "unitBuyPrice", "unitSellPrice", "totalBuyPrice", "totalSellPrice", "totalStock"
+                "id", "name", "musician", "singer", "subCategoryName", "unitBuyPrice", "unitSellPrice", "totalBuyPrice", "totalSellPrice", "totalStock"
             }
         ) {
             boolean[] canEdit = new boolean [] {
