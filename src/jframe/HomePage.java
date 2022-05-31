@@ -37,6 +37,7 @@ public class HomePage extends javax.swing.JFrame {
     Product productPanel=new Product();
     Onlybook bookPanel= new Onlybook();
     Onlymusic musicPanel= new Onlymusic();
+    Onlymovie moviePanel= new Onlymovie();
     
     // Constructor
     public HomePage() {
@@ -56,6 +57,10 @@ public class HomePage extends javax.swing.JFrame {
         musicPanel.setSize(1314, 811);
         music.add(musicPanel);
         music.setVisible(false);
+        
+        moviePanel.setSize(1314, 811);
+        movie.add(moviePanel);
+        movie.setVisible(false);
         
         current = this.home;
         current.setVisible(true);
@@ -104,6 +109,7 @@ public class HomePage extends javax.swing.JFrame {
         product = new javax.swing.JPanel();
         book = new javax.swing.JPanel();
         music = new javax.swing.JPanel();
+        movie = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -296,6 +302,11 @@ public class HomePage extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(153, 153, 153));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcons/icons8_Return_Purchase_26px.png"))); // NOI18N
         jLabel12.setText("Đĩa phim");
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel12MouseClicked(evt);
+            }
+        });
         jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         jPanel3.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 240, 50));
@@ -428,6 +439,21 @@ public class HomePage extends javax.swing.JFrame {
         );
 
         panelMain.add(music, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 66, 1310, 1000));
+
+        movie.setPreferredSize(new java.awt.Dimension(1310, 1000));
+
+        javax.swing.GroupLayout movieLayout = new javax.swing.GroupLayout(movie);
+        movie.setLayout(movieLayout);
+        movieLayout.setHorizontalGroup(
+            movieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1310, Short.MAX_VALUE)
+        );
+        movieLayout.setVerticalGroup(
+            movieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+        );
+
+        panelMain.add(movie, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 66, 1310, 1000));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -595,6 +621,13 @@ public class HomePage extends javax.swing.JFrame {
         current = music;
         current.setVisible(true);
     }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
+        // TODO add your handling code here:
+        current.setVisible(false);
+        current = movie;
+        current.setVisible(true);
+    }//GEN-LAST:event_jLabel12MouseClicked
     int xx = 0;    int x = 240;    int xxx = 0;
     /**
      * @param args the command line arguments
@@ -662,6 +695,7 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel movie;
     private javax.swing.JPanel music;
     private javax.swing.JPanel panelMain;
     private javax.swing.JPanel product;
