@@ -2,6 +2,7 @@ package Exam;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 /*
@@ -18,10 +19,7 @@ public class Essay {
    int level;
    int chapter;
    public Essay(){
-       this.essayQuestion=createMockEssayQuestion();
-   }
-   public Essay(List<EssayQuestion> essayQuestion){
-       this.essayQuestion=essayQuestion;
+       this.essayQuestion=new ArrayList<EssayQuestion>();
    }
    public List<EssayQuestion> getEssayQuestion(int level,int chapter,Subject subject){
        List<EssayQuestion> result = new ArrayList<EssayQuestion>();
@@ -31,14 +29,18 @@ public class Essay {
        System.out.println("result esay"+result.size());
        return result;
    }
-   public List<EssayQuestion> createMockEssayQuestion(){
-       List<EssayQuestion>tmp=new ArrayList<EssayQuestion>();
-       Subject subject=new Subject("oop","IT3110",10,"khong biet");
-       tmp.add(new EssayQuestion("how old are you", "i'm fine, thanks",5,2,subject));
-       tmp.add(new EssayQuestion("how old are you", "i'm eight",5,2,subject));
-       tmp.add(new EssayQuestion("What is your name", "i'm truong",5,2,subject));
-       tmp.add(new EssayQuestion("How are you", "i'm fine, thanks",5,2,subject));
-       tmp.add(new EssayQuestion("how do you do", "i'm police",5,2,subject));
-       return tmp;
+   public void createMockEssayQuestion(List<Subject>subjectList){
+       this.essayQuestion.add(new EssayQuestion("how old are you", "i'm fine, thanks",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
+       this.essayQuestion.add(new EssayQuestion("how old are you", "i'm eight",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
+       this.essayQuestion.add(new EssayQuestion("What is your name", "i'm truong",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
+       this.essayQuestion.add(new EssayQuestion("How are you", "i'm fine, thanks",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
+       this.essayQuestion.add(new EssayQuestion("how do you do", "i'm police",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
+       return;
    }
+   public void addEssayQuestion(String question,String hint,int level,int chapter,Subject subject){
+       EssayQuestion essayQuest=new EssayQuestion(question,hint,level,chapter,subject);
+       this.essayQuestion.add(essayQuest);
+       return;
+   }
+   
 }

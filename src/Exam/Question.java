@@ -8,7 +8,7 @@ package Exam;
  *
  * @author truong
  */
-public class Question {
+public abstract class Question implements IAnswer {
     String question;
     int  level ;
     int chapter;
@@ -19,6 +19,7 @@ public class Question {
         this.level=level;
         this.subject=subject;
     }
+    public abstract String getAnswer();
     public String getQuestion()
     {
         return this.question;

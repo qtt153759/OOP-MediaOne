@@ -8,6 +8,6 @@ package Exam;
  *
  * @author truong
  */
-public interface IQuestion {
-    
+public interface IAnswer {
+    public String getAnswer();
 }

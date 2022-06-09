@@ -15,5 +15,12 @@ public class EssayQuestion extends Question {
         this.hint=hint;
        
     }
-    
+    public String getHint(){
+       return this.hint;
+   }
+
+    @Override
+    public String getAnswer() {
+        return "essay answer: " + this.hint; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

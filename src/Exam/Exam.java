@@ -17,19 +17,18 @@ public class Exam {
    Essay essay;
    MultipleChoice multipleChoice;
    Subject subject;
-   public Exam(){
-
+   public Exam(Essay essay,MultipleChoice multipleChoice){
+       this.essay=essay;
+       this.multipleChoice =multipleChoice;
    }
    public List<Question> getExam(int level,int chapter,Subject subject){
-       essay=new Essay();
-       multipleChoice =new MultipleChoice();
-       List<EssayQuestion> essayQuestionList=essay.getEssayQuestion(level, chapter,subject);
-       List<MultipleChoiceQuestion> multipleChoiceQuestionList=multipleChoice.getMultipleChoice(level, chapter,subject);
+       List<EssayQuestion> essayQuestionList=this.essay.getEssayQuestion(level, chapter,subject);
+       List<MultipleChoiceQuestion> multipleChoiceQuestionList=this.multipleChoice.getMultipleChoice(level, chapter,subject);
        List<Question> question=new ArrayList<Question>();
        question.addAll(essayQuestionList);
        question.addAll(multipleChoiceQuestionList);
        return question;
    }
-
-  
+   
+   
 }
