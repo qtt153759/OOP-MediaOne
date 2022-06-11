@@ -5,39 +5,55 @@
 package Question;
 
 import Subject.Subject;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
  * @author truong
  */
 public abstract class Question implements IQuestion {
+    // cách get Id tự tăng 
+
+    private static final AtomicInteger counter = new AtomicInteger();
+    public int id;
     public String question;
-    public int  level ;
+    public int level;
     public int chapter;
     public Subject subject;
-    public Question(String question,int level,int chapter,Subject subject){
-        this.question=question;
-        this.chapter=chapter;
-        this.level=level;
-        this.subject=subject;
+
+    public Question(String question, int level, int chapter, Subject subject) {
+        this.question = question;
+        this.chapter = chapter;
+        this.level = level;
+        this.subject = subject;
+        this.id = counter.incrementAndGet();
     }
-    public abstract String getAnswer();
+
+    public void addAnswer() {
+
+    }
+
+    ;
     @Override
-    public void printQuestion(){
-        System.out.println("Question "+" : "+"( level: "+ this.level+" ,chapter: "+this.chapter+" ) "+ this.question);
-        this.getAnswer();
-        System.out.println(this.subject.MaHP);
-    };
-    public String getQuestion()
-    {
+    public void printQuestion() {
+        System.out.println("Question " + id + " : " + "( level: " + this.level + " ,chapter: " + this.chapter + " ,subject: " + this.subject.MaHP + " ) " + this.question);
+        System.out.println(getAnswer());
+    }
+
+    ;
+    public String getQuestion() {
         return this.question;
-    };
-    public int getLevel()
-    {
+    }
+
+    ;
+    public int getLevel() {
         return this.level;
-    };
-    public int getChapter()
-    {
+    }
+
+    ;
+    public int getChapter() {
         return this.chapter;
-    };
+    }
+;
 }

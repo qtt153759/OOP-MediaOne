@@ -9,6 +9,8 @@ package Question;
  * @author truong
  */
 public interface IQuestion {
+
     public String getAnswer();
+
     public void printQuestion();
 }

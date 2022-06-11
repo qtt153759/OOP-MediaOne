@@ -5,24 +5,33 @@
 package Question;
 
 import Subject.Subject;
+import java.util.List;
 
 /**
  *
  * @author truong
  */
 public class EssayQuestion extends Question {
+
     String hint;
-    public EssayQuestion(String question,String hint,int level,int chapter,Subject subject){
-        super(question,level,chapter,subject);
-        this.hint=hint;
-       
+
+    public EssayQuestion(String question, String hint, int level, int chapter, Subject subject) {
+        super(question, level, chapter, subject);
+        this.hint = hint;
+
     }
-    public String getHint(){
-       return this.hint;
-   }
+
+    public String getHint() {
+        return this.hint;
+    }
 
     @Override
     public String getAnswer() {
-        return "essay answer: " + this.hint; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Essay answer: " + this.hint; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    public void addAnswer(String hint) {
+        this.hint = hint;
+    }
+
 }
