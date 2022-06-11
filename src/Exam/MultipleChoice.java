@@ -4,6 +4,9 @@
  */
 package Exam;
 
+import Question.MultipleChoiceQuestion;
+import Question.Choice;
+import Subject.Subject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -43,5 +46,8 @@ public class MultipleChoice {
        MultipleChoiceQuestion multiQuest=new MultipleChoiceQuestion(question,choice,answer,level,chapter,subject);
        this.multipleChoiceQuestion.add(multiQuest);
        return;
+   }
+    public void setMultipleChoiceQuestion(List<MultipleChoiceQuestion> multipleChoiceQuestions){
+       this.multipleChoiceQuestion=multipleChoiceQuestions;
    }
 }

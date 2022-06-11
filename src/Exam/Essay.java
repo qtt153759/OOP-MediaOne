@@ -1,5 +1,8 @@
 package Exam;
 
+import Question.EssayQuestion;
+import Question.Question;
+import Subject.Subject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -24,23 +27,17 @@ public class Essay {
    public List<EssayQuestion> getEssayQuestion(int level,int chapter,Subject subject){
        List<EssayQuestion> result = new ArrayList<EssayQuestion>();
        System.out.println("origin essay"+essayQuestion.size()+"   "+level +chapter+subject.name);
-              System.out.println("mock essay"+essayQuestion.get(0).level +essayQuestion.get(0).chapter+essayQuestion.get(0).subject.name);
        result=this.essayQuestion.stream().filter( essayQuestion -> essayQuestion.level==level && essayQuestion.chapter==chapter && essayQuestion.subject.name==subject.name).collect(Collectors.toList());
        System.out.println("result esay"+result.size());
        return result;
-   }
-   public void createMockEssayQuestion(List<Subject>subjectList){
-       this.essayQuestion.add(new EssayQuestion("how old are you", "i'm fine, thanks",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
-       this.essayQuestion.add(new EssayQuestion("how old are you", "i'm eight",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
-       this.essayQuestion.add(new EssayQuestion("What is your name", "i'm truong",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
-       this.essayQuestion.add(new EssayQuestion("How are you", "i'm fine, thanks",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
-       this.essayQuestion.add(new EssayQuestion("how do you do", "i'm police",5,2,subjectList.get(new Random().nextInt(subjectList.size()))));
-       return;
    }
    public void addEssayQuestion(String question,String hint,int level,int chapter,Subject subject){
        EssayQuestion essayQuest=new EssayQuestion(question,hint,level,chapter,subject);
        this.essayQuestion.add(essayQuest);
        return;
    }
-   
+   public void setEssayQuestion(List<EssayQuestion> essayQuestion){
+       this.essayQuestion=essayQuestion;
+   }
+
 }

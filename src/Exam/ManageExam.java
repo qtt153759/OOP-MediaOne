@@ -1,6 +1,8 @@
 package Exam;
 
 
+import Subject.ManageSubject;
+import Subject.Subject;
 import Exam.Exam;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +18,34 @@ import java.util.List;
  */
 public class ManageExam {
     List<Exam> examList;
-    ManageSubject manageSubject;
+    List<Subject>subjectList;
     public ManageExam(){
         this.examList=new ArrayList<Exam>();
-        this.manageSubject=new ManageSubject();   
+        this.subjectList=ManageSubject.subjectList;   
     }
-    public void testAndMock(){
-        this.manageSubject.mockSubjectList();
+//    public void testAndMock(){
+//        this.manageSubject.mockSubjectList();
+//        
+//    }
+    public void createExam(String name,int level,int chapter,Subject subject,boolean isShuffle){
+        Exam exam=new Exam(name);
+        if(isShuffle){
+            exam.createShuffleExam(level, chapter,subject);
+        }
+        examList.add(exam);
+        return;
+    }
+    public Exam getExamByName(String name){
+        Exam result=this.examList.stream().filter( exam -> exam.name==name).findFirst().orElse(null);
+        if(result==null){
+            
+        }
+        return result;
+    }
+    public void printExamList(){
+        for(Exam exam:examList){
+            System.out.println("**********");
+            exam.printExam();
+        }
     }
 }
