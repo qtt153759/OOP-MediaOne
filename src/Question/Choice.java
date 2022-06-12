@@ -24,4 +24,5 @@ public class Choice {
         alphabet += order;
         return alphabet + ": " + answer + " ... ";
     }
+   
 }

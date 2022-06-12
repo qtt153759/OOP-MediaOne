@@ -9,7 +9,10 @@ import Subject.Subject;
 import static Subject.ManageSubject.subjectList;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -60,30 +63,76 @@ public class ManageQuestion {
     }
 
     public void mockMultipleQuestion() {
-        List<Choice> choice = createMockChoice();
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how old are you", choice, choice.get(new Random().nextInt(choice.size())), 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("What time is it", choice, choice.get(new Random().nextInt(choice.size())), 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Do you have launch", choice, choice.get(new Random().nextInt(choice.size())), 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Hello from the out the side", choice, choice.get(new Random().nextInt(choice.size())), 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how old are you", choice, choice.get(new Random().nextInt(choice.size())), 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how do you like that", choice, choice.get(new Random().nextInt(choice.size())), 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("let her go", choice, choice.get(new Random().nextInt(choice.size())), 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Photography", choice, choice.get(new Random().nextInt(choice.size())), 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Among us", choice, choice.get(new Random().nextInt(choice.size())), 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Landmark", choice, choice.get(new Random().nextInt(choice.size())), 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("international company", choice, choice.get(new Random().nextInt(choice.size())), 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("solution architect", choice, choice.get(new Random().nextInt(choice.size())), 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-
+        HashMap<List<Choice>,List<Choice>> listOfListChoice = new HashMap<List<Choice>,List<Choice>>();
+        listOfListChoice = createMockChoice(listOfListChoice,"abc","bcd","def","jhi");
+        listOfListChoice=createMockChoice(listOfListChoice, "xyz", "mnp", "jqk", "tuv");
+        Random rand = new Random();
+        List<List<Choice>> keySet =new ArrayList<List<Choice>>(listOfListChoice.keySet());
+        List<Choice> key=keySet.get(rand.nextInt(keySet.size()));
+        List<Choice> val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how old are you", key,val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("What time is it", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Do you have launch", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Hello from the out the side", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how old are you", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how do you like that", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("let her go", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Photography", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Among us", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Landmark", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("international company", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("solution architect", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        key=keySet.get(rand.nextInt(keySet.size()));
+        val=listOfListChoice.get(key);
         return;
     }
 
-    public List<Choice> createMockChoice() {
+    public HashMap<List<Choice>,List<Choice>> createMockChoice(HashMap<List<Choice>,List<Choice>> listOfListChoice,String a,String b,String c,String d) {
         List<Choice> choice = new ArrayList<Choice>();
-        choice.add(new Choice(1, "abc"));
-        choice.add(new Choice(2, "cdc"));
-        choice.add(new Choice(3, "bce"));
-        choice.add(new Choice(4, "asdf"));
-        return choice;
+        List<Choice> answer = new ArrayList<Choice>();
+        Random rand = new Random();
+        List<String> listChoiceSample=new ArrayList<String>(List.of(a,b,c,d));
+        for(int i=0;i<4;i++){
+            System.out.println("checkk before size"+i+" laf "+listChoiceSample.size());
+            String ans=listChoiceSample.get(rand.nextInt(listChoiceSample.size()));
+            Choice ch=new Choice(i,ans);
+            choice.add(ch);
+            //random answer
+            int int_random = rand.nextInt(100)+1; 
+            if(int_random%2==0){
+                answer.add(ch);
+            }
+            listChoiceSample.remove(ans);
+            for(int j=0;j<listChoiceSample.size();j++){
+                System.out.println("string"+listChoiceSample.get(j));
+            }
+            System.out.println("checkk before after"+i+" la "+listChoiceSample.size());
+
+        }
+        listOfListChoice.put(choice, answer);
+        return listOfListChoice;
     }
 
     public static List<Question> getShuffleQuestion(List<Question> questionList, int numberQuestion) {
@@ -159,5 +208,23 @@ public class ManageQuestion {
                 System.out.println("======");
             }
         }
+    }
+    public void deleteQuestion(Question quest){
+         if (quest instanceof EssayQuestion) {
+            System.out.println("remove essay");
+        } else if (quest instanceof MultipleChoiceQuestion) {
+            System.out.println("remove multiple");
+            this.multipleChoiceQuestionList.remove(quest);
+        } else {
+        }
+        setQuestionList();
+        return;
+    }
+    public Question getQuestionByName(int id){
+        Question result =questionList.stream().filter(quest -> quest.id == id).findFirst().orElse(null);
+        if(result!=null){
+            System.out.println("delet");
+        }
+        return result;
     }
 }

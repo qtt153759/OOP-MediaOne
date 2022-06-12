@@ -14,9 +14,9 @@ import java.util.List;
 public class MultipleChoiceQuestion extends Question {
 
     List<Choice> choice;
-    Choice answer;
+    List<Choice> answer;
 
-    public MultipleChoiceQuestion(String question, List<Choice> choice, Choice answer, int level, int chapter, Subject subject) {
+    public MultipleChoiceQuestion(String question, List<Choice> choice,  List<Choice> answer, int level, int chapter, Subject subject) {
         super(question, level, chapter, subject);
         this.choice = choice;
         this.answer = answer;
@@ -25,10 +25,14 @@ public class MultipleChoiceQuestion extends Question {
     @Override
     public String getAnswer() {
         String listChoice = "Choice list: ";
+        String listAnsw = "\nMulti answer is ";
         for (Choice choi : choice) {
             listChoice += choi.getChoice();
         }
-        return listChoice + "\nMulti answer is " + this.answer.getChoice(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        for( Choice answ:answer){
+            listAnsw+=answ.getChoice();
+        }
+        return listChoice + listAnsw; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public List<Choice> getChoice() {
@@ -39,9 +43,9 @@ public class MultipleChoiceQuestion extends Question {
 
     }
 
-    public void addAnswer(List<Choice> choiceList, Choice choice) {
+    public void addAnswer(List<Choice> choiceList, List<Choice> answer) {
         this.choice = choiceList;
-        this.answer = choice;
+        this.answer = answer;
     }
 
 }

@@ -40,7 +40,6 @@ public class Essay {
         System.out.println("essayQUest" + this.essayQuestion.size());
         return;
     }
-
     public void setEssayQuestion(List<EssayQuestion> essayQuestion) {
         this.essayQuestion = essayQuestion;
     }

@@ -39,7 +39,11 @@ public class ManageExam {
         examList.add(exam);
         return;
     }
-
+    public void deleteExam(Exam exam){
+        this.examList.remove(exam);
+        exam=null;
+        return; 
+    }
     public Exam getExamByName(String name) {
         Exam result = this.examList.stream().filter(exam -> exam.name == name).findFirst().orElse(null);
         if (result == null) {

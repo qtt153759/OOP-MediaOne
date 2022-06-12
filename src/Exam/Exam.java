@@ -23,8 +23,8 @@ public class Exam {
     public int level;
     public int chapter;
     public Essay essay;
-    MultipleChoice multipleChoice;
-    List<Question> questionList;
+    public MultipleChoice multipleChoice;
+    public List<Question> questionList;
     Subject subject;
 
     public Exam(String name) {
@@ -38,14 +38,16 @@ public class Exam {
         this.level = level;
         this.chapter = chapter;
         this.subject = subject;
-        List<EssayQuestion> essayList = (List) ManageQuestion.getQuestionList(level, chapter, subject, "ESSAY");
-        List<MultipleChoiceQuestion> multipleChoiceList = (List) ManageQuestion.getQuestionList(level, chapter, subject, "MULTIPLE_CHOICE");
+        //copy questionList ra 1 cái list khác, không trỏ trực tiếp địa chỉ essayList=ManageQuestion.getQuestionList(level,chapter,subjec,ESSAY) như thế này
+        //để tránh trường hợp khi remove câu hỏi trong Exam thì mất question trong ManageQuestion hoặc khi delete question trong  
+        List<EssayQuestion> essayList = new ArrayList<EssayQuestion>((List) ManageQuestion.getQuestionList(level, chapter, subject, "ESSAY"));
+        List<MultipleChoiceQuestion> multipleChoiceList = new ArrayList<MultipleChoiceQuestion>((List) ManageQuestion.getQuestionList(level, chapter, subject, "MULTIPLE_CHOICE"));
         essayList = ManageQuestion.getShuffleQuestion((List) essayList, 5);
         multipleChoiceList = ManageQuestion.getShuffleQuestion((List) multipleChoiceList, 5);
         this.essay.setEssayQuestion(essayList);
         this.multipleChoice.setMultipleChoiceQuestion(multipleChoiceList);
         setQuestionList();
-        System.out.println("Exam Size list question: "+this.questionList.size()+" voi essay:"+this.essay.essayQuestion.size()+" va multi "+this.multipleChoice.multipleChoiceQuestion.size());
+        System.out.println("Exam Size list question: " + this.questionList.size() + " voi essay:" + this.essay.essayQuestion.size() + " va multi " + this.multipleChoice.multipleChoiceQuestion.size());
         return;
     }
 
@@ -54,7 +56,7 @@ public class Exam {
         setQuestionList();
     }
 
-    public void addMultipleChoiceQuestion(String question, List<Choice> choice, Choice answer, int level, int chapter, Subject subject) {
+    public void addMultipleChoiceQuestion(String question, List<Choice> choice, List<Choice> answer, int level, int chapter, Subject subject) {
         this.multipleChoice.addMultipleChoiceQuestion(question, choice, answer, level, chapter, subject);
         setQuestionList();
     }
@@ -70,5 +72,19 @@ public class Exam {
         for (Question quest : this.questionList) {
             quest.printQuestion();
         }
+    }
+
+    public void removeQuestion(Question quest) {
+//        questionList.remove(quest);
+        if (quest instanceof EssayQuestion) {
+            System.out.println("remove essay");
+        } else if (quest instanceof MultipleChoiceQuestion) {
+            System.out.println("remove multiple");
+            this.multipleChoice.multipleChoiceQuestion.remove(quest);
+        } else {
+            this.essay.essayQuestion.remove(quest);
+        }
+        setQuestionList();
+        return;
     }
 }
