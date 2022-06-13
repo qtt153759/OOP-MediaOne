@@ -4,18 +4,25 @@
  */
 package Jframe;
 
+import Subject.ManageSubject;
+
 /**
  *
  * @author admin
  */
-public class giaodienchinh extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form giaodienchinh
      */
-    public giaodienchinh() {
+    ManageSubjectFrame manageSubjectFrame;
+    ManageSubject manageSubject;
+    
+    public MainFrame() {
         initComponents();
-        
+        manageSubject= new ManageSubject();
+        manageSubject.mockSubjectList(1);
+        manageSubject.printSubjectList();
     }
 
     /**
@@ -56,7 +63,7 @@ public class giaodienchinh extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(164, 55));
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Soạn câu hỏi");
+        jLabel6.setText("Manage Subject");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
@@ -85,7 +92,7 @@ public class giaodienchinh extends javax.swing.JFrame {
         jPanel3.setPreferredSize(new java.awt.Dimension(164, 55));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Xây dựng đề thi");
+        jLabel5.setText("Manage Question");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
@@ -115,7 +122,7 @@ public class giaodienchinh extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(211, 211, 211));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Làm bài thi");
+        jLabel4.setText("Manage Exam");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
@@ -278,7 +285,9 @@ public class giaodienchinh extends javax.swing.JFrame {
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         // TODO add your handling code here:
-        System.out.print("Soạn đề thi");
+        manageSubjectFrame=new ManageSubjectFrame();
+        manageSubjectFrame.setVisible(true);
+//        System.out.print("Soạn đề thi");
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
@@ -313,21 +322,51 @@ public class giaodienchinh extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(giaodienchinh.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(giaodienchinh.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(giaodienchinh.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(giaodienchinh.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new giaodienchinh().setVisible(true);
+                new MainFrame().setVisible(true);
             }
         });
     }
