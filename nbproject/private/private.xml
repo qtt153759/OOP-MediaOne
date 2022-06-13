@@ -2,20 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Exam/MultipleChoice.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Exam/Exam.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Question/Choice.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/mediaone/MediaOne.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Question/EssayQuestion.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Question/Question.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Exam/Essay.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Question/ManageQuestion.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Subject/ManageSubject.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Exam/ManageExam.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Subject/Subject.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Question/MultipleChoiceQuestion.java</file>
-            <file>file:/home/truong/NetBeansProjects/MediaOne/src/Question/IQuestion.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
