@@ -32,8 +32,12 @@ public class ManageSubject {
         return;
     }
 
-    public void addSubject(String name, String MaHp, int totalChapter, String description) {
-        this.subjectList.add(new Subject(name, MaHp, totalChapter, description));
+    public static void addSubject(String name, String MaHp, int totalChapter, String description) {
+        ManageSubject.subjectList.add(new Subject(name, MaHp, totalChapter, description));
+        return;
+    }
+    public static void deleteSubject(Subject subject) {
+        ManageSubject.subjectList.remove(subject);
         return;
     }
 
