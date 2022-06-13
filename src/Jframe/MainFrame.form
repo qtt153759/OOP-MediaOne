@@ -139,7 +139,7 @@
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="So&#x1ea1;n c&#xe2;u h&#x1ecf;i"/>
+                <Property name="text" type="java.lang.String" value="Manage Subject"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel6MouseClicked"/>
@@ -186,7 +186,7 @@
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="X&#xe2;y d&#x1ef1;ng &#x111;&#x1ec1; thi"/>
+                <Property name="text" type="java.lang.String" value="Manage Question"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel5MouseClicked"/>
@@ -236,7 +236,7 @@
                   <Color blue="d3" green="d3" red="d3" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="L&#xe0;m b&#xe0;i thi"/>
+                <Property name="text" type="java.lang.String" value="Manage Exam"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel4MouseClicked"/>

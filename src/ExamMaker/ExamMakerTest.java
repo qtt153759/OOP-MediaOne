@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package mediaone;
+package ExamMaker;
 
 import Exam.Exam;
 import Exam.ManageExam;
@@ -20,7 +20,7 @@ import java.util.Random;
  *
  * @author truong
  */
-public class MediaOne {
+public class ExamMakerTest {
 
     /**
      * @param args the command line arguments
@@ -45,8 +45,8 @@ public class MediaOne {
         ManageExam manageExam = new ManageExam();
         //test bài thi random 
         testRandom(manageExam, manageSubject, manageQuestion);
-        //test bài thi thủ cong
-//        testManual(manageExam,manageSubject,manageQuestion);
+//        //test bài thi thủ cong
+////        testManual(manageExam,manageSubject,manageQuestion);
 
     }
 
@@ -61,7 +61,7 @@ public class MediaOne {
                 System.out.println("**********&&&&&&&&&&&&&&&&&&&*********************");
 
         System.out.println("test remove");
-        manageQuestion.deleteQuestion(exam.questionList.get(5));
+        manageQuestion.deleteQuestion(exam.questionList.get(2));
         exam.printExam();
     }
 

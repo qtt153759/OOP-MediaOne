@@ -19,8 +19,6 @@ import java.util.stream.Collectors;
 public class Essay {
 
     public List<EssayQuestion> essayQuestion;
-    public int level;
-    public int chapter;
 
     public Essay() {
         this.essayQuestion = new ArrayList<EssayQuestion>();

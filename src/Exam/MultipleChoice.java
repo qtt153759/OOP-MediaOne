@@ -20,9 +20,6 @@ import java.util.stream.Collectors;
 public class MultipleChoice {
 
     List<MultipleChoiceQuestion> multipleChoiceQuestion;
-    int level;
-    int chapter;
-    List<Subject> subjectList;
 
     public MultipleChoice() {
         this.multipleChoiceQuestion = new ArrayList<MultipleChoiceQuestion>();

@@ -30,7 +30,7 @@ public abstract class Question implements IQuestion {
         this.id = counter.incrementAndGet();
     }
 
-    public void addAnswer() {
+    public void setAnswer() {
 
     }
 

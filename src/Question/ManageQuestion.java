@@ -134,7 +134,7 @@ public class ManageQuestion {
         listOfListChoice.put(choice, answer);
         return listOfListChoice;
     }
-
+//leve=5,chapter=4,subject 10000=>500 50
     public static List<Question> getShuffleQuestion(List<Question> questionList, int numberQuestion) {
         //nếu số câu hỏi mà lớn hơn tổng số questionList thì numberQuestion=questionList;
         numberQuestion = questionList.size() < numberQuestion ? questionList.size() : numberQuestion;
@@ -212,6 +212,7 @@ public class ManageQuestion {
     public void deleteQuestion(Question quest){
          if (quest instanceof EssayQuestion) {
             System.out.println("remove essay");
+            this.essayQuestionList.remove(quest);
         } else if (quest instanceof MultipleChoiceQuestion) {
             System.out.println("remove multiple");
             this.multipleChoiceQuestionList.remove(quest);
@@ -220,7 +221,7 @@ public class ManageQuestion {
         setQuestionList();
         return;
     }
-    public Question getQuestionByName(int id){
+    public Question getQuestionById(int id){
         Question result =questionList.stream().filter(quest -> quest.id == id).findFirst().orElse(null);
         if(result!=null){
             System.out.println("delet");

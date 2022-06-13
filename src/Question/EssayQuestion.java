@@ -30,7 +30,7 @@ public class EssayQuestion extends Question {
         return "Essay answer: " + this.hint; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public void addAnswer(String hint) {
+    public void setAnswer(String hint) {
         this.hint = hint;
     }
 

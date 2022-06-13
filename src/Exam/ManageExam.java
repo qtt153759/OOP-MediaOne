@@ -18,17 +18,11 @@ import java.util.Random;
 public class ManageExam {
 
     public List<Exam> examList;
-    public List<Subject> subjectList;
 
     public ManageExam() {
         this.examList = new ArrayList<Exam>();
-        this.subjectList = ManageSubject.subjectList;
     }
-//    public void testAndMock(){
-//        this.manageSubject.mockSubjectList();
-//        
-//    }
-
+//isShuffle  true là tạo bài thi tự động, false là tạo thủ công
     public void createExam(String name, int level, int chapter, Subject subject, boolean isShuffle) {
         Exam exam = new Exam(name);
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@");
