@@ -9,6 +9,11 @@ import Subject.Subject;
 import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+<<<<<<< HEAD
+=======
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.GroupLayout;
@@ -30,11 +35,16 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
     AddNewSubject addSubjectPanel;
     List<JPanel> tmpPanel;
     List<JLabel> tmpLabel;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
     public ManageSubjectFrame() {
         initComponents();
         jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         jPanel2 = new JPanel(new GridBagLayout());
+<<<<<<< HEAD
             GridBagConstraints gbc = new GridBagConstraints();
             gbc.gridwidth = GridBagConstraints.REMAINDER;
             gbc.weightx = 1;
@@ -46,11 +56,23 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
             renderSubjectList(ManageSubject.subjectList.get(i));
         }
         this.addSubjectPanel = new AddNewSubject();
+=======
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.weightx = 1;
+        gbc.weighty = 1;
+        jPanel2.add(new JPanel(), gbc);
+
+        jScrollPane1.setViewportView(jPanel2);
+        this.createSubjectList();
+        this.addSubjectPanel = new AddNewSubject(this);
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         this.addSubjectPanel.setSize(275, 275);
         this.addSubjectPanel.setVisible(true);
         this.current.add(this.addSubjectPanel);
     }
 
+<<<<<<< HEAD
     public void renderSubjectList(Subject subject){
         JPanel panel = new JPanel();
                     panel.add(new JLabel(subject.name));
@@ -64,6 +86,52 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
                     validate();
                     repaint();
     }
+=======
+    public void setCurrentPanel(java.awt.event.MouseEvent evt, Subject subject) {
+        System.out.println("clieck" + subject.MaHP);
+        System.out.println("check before" + this.current.getComponents().length);
+        this.current.setVisible(false);
+        this.current.removeAll();
+        SubjectPanel subjectPanel = new SubjectPanel(this,subject);
+        subjectPanel.setSize(275, 275);
+        subjectPanel.setVisible(true);
+        this.current.add(subjectPanel);
+        System.out.println("check after comp" + this.current.getComponents().length);
+        this.current.setVisible(true);
+
+    }
+
+    public void createSubjectList() {
+        jPanel2.removeAll();
+        for (int i = 0; i < ManageSubject.subjectList.size(); i++) {
+            JPanel panel = new JPanel();
+            final Subject selectedSuject = ManageSubject.subjectList.get(i);
+            panel.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    setCurrentPanel(evt, selectedSuject);
+                }
+            });
+            renderSubjectList(ManageSubject.subjectList.get(i), panel);
+        }
+    }
+
+    public JPanel getJPanelInScrollPane() {
+        return this.jPanel2;
+    }
+
+    public void renderSubjectList(Subject subject, JPanel panel) {
+        panel.add(new JLabel(subject.name));
+        panel.setBorder(new MatteBorder(0, 0, 1, 0, Color.GRAY));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.weightx = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        jPanel2.add(panel, gbc, 0);
+        validate();
+        repaint();
+    }
+
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -82,6 +150,10 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
+<<<<<<< HEAD
+=======
+        jButton1 = new javax.swing.JButton();
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(400, 350));
@@ -132,11 +204,19 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
         current.setLayout(currentLayout);
         currentLayout.setHorizontalGroup(
             currentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGap(0, 309, Short.MAX_VALUE)
         );
         currentLayout.setVerticalGroup(
             currentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 226, Short.MAX_VALUE)
+=======
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        currentLayout.setVerticalGroup(
+            currentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 292, Short.MAX_VALUE)
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         );
 
         jTextField6.setBackground(new java.awt.Color(245, 245, 245));
@@ -167,6 +247,21 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel2);
 
+<<<<<<< HEAD
+=======
+        jButton1.setText("Back");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -183,6 +278,7 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                         .addGap(18, 109, Short.MAX_VALUE)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
@@ -194,16 +290,46 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(current, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)
                         .addContainerGap())))
+=======
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(current, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 248, Short.MAX_VALUE)
+                                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(70, 70, 70)
+                                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(22, 22, 22))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))))
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(17, 17, 17)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(current, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+=======
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(current, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -219,7 +345,13 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -234,12 +366,35 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MouseClicked
+<<<<<<< HEAD
         // TODO add your handling code here:
         this.addSubjectPanel = new AddNewSubject();
         this.current = addSubjectPanel;
         this.current.setVisible(true);
     }//GEN-LAST:event_jTextField6MouseClicked
 
+=======
+        this.createAddSubjectForm();
+    }//GEN-LAST:event_jTextField6MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        this.dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
+    public void createAddSubjectForm() {
+        this.current.setVisible(false);
+        this.current.removeAll();
+        this.addSubjectPanel = new AddNewSubject(this);
+        this.addSubjectPanel.setSize(275, 275);
+        this.addSubjectPanel.setVisible(true);
+        this.current.add(addSubjectPanel);
+        this.current.setVisible(true);
+    }
+
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
     /**
      * @param args the command line arguments
      */
@@ -269,10 +424,13 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+<<<<<<< HEAD
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+=======
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -282,8 +440,17 @@ public class ManageSubjectFrame extends javax.swing.JFrame {
         });
     }
 
+<<<<<<< HEAD
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel current;
+=======
+    public void printPane() {
+        System.out.println("pain");
+    }
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel current;
+    private javax.swing.JButton jButton1;
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel8;

@@ -26,7 +26,14 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
           <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+=======
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -62,6 +69,7 @@
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
+<<<<<<< HEAD
                           <EmptySpace type="separate" pref="109" max="32767" attributes="0"/>
                           <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
@@ -74,6 +82,29 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="current" pref="309" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
+=======
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="current" pref="466" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="248" max="32767" attributes="0"/>
+                                  <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                  <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField7" min="-2" pref="43" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jButton1" min="-2" pref="114" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
                       </Group>
                   </Group>
               </Group>
@@ -82,12 +113,24 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Component id="jTextField1" min="-2" pref="27" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="current" pref="226" max="32767" attributes="0"/>
                       <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+=======
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jTextField1" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="jButton1" min="-2" pref="32" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="current" pref="292" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="292" max="32767" attributes="0"/>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -176,12 +219,20 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
                   <EmptySpace min="0" pref="309" max="32767" attributes="0"/>
+=======
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
                   <EmptySpace min="0" pref="226" max="32767" attributes="0"/>
+=======
+                  <EmptySpace min="0" pref="292" max="32767" attributes="0"/>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
               </Group>
             </DimensionLayout>
           </Layout>
@@ -240,6 +291,18 @@
             </Container>
           </SubComponents>
         </Container>
+<<<<<<< HEAD
+=======
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Back"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
+        </Component>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
       </SubComponents>
     </Container>
   </SubComponents>

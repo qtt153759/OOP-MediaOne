@@ -346,6 +346,7 @@ public class MainFrame extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+<<<<<<< HEAD
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -362,6 +363,8 @@ public class MainFrame extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+=======
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

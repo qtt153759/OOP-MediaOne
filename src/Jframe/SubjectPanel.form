@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<<<<<<< HEAD
+=======
+  <Properties>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[450, 300]"/>
+    </Property>
+  </Properties>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -31,7 +39,11 @@
                       <Component id="jTextField7" min="-2" pref="37" max="-2" attributes="0"/>
                   </Group>
               </Group>
+<<<<<<< HEAD
               <EmptySpace max="32767" attributes="0"/>
+=======
+              <EmptySpace pref="153" max="32767" attributes="0"/>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
                       <Component id="jFormattedTextField3" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
@@ -68,7 +80,15 @@
                   <Component id="jTextField4" min="-2" pref="30" max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="68" max="-2" attributes="0"/>
               </Group>
+<<<<<<< HEAD
               <EmptySpace max="32767" attributes="0"/>
+=======
+<<<<<<<< HEAD:src/Jframe/AddNewSubject.form
+              <EmptySpace max="32767" attributes="0"/>
+========
+              <EmptySpace pref="78" max="32767" attributes="0"/>
+>>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7:src/Jframe/SubjectPanel.form
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jTextField6" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -133,6 +153,12 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="T&#xea;n m&#xf4;n h&#x1ecd;c"/>
       </Properties>
+<<<<<<< HEAD
+=======
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFormattedTextField1ActionPerformed"/>
+      </Events>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
     </Component>
     <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField2">
       <Properties>
@@ -172,6 +198,10 @@
         <Property name="text" type="java.lang.String" value="L&#x1b0;u"/>
       </Properties>
       <Events>
+<<<<<<< HEAD
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTextField5MouseClicked"/>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
       </Events>
     </Component>
@@ -187,6 +217,10 @@
         <Property name="text" type="java.lang.String" value="X&#xf3;a m&#xf4;n h&#x1ecd;c"/>
       </Properties>
       <Events>
+<<<<<<< HEAD
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTextField6MouseClicked"/>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
       </Events>
     </Component>
@@ -195,6 +229,10 @@
         <Property name="text" type="java.lang.String" value="H&#x1ee7;y"/>
       </Properties>
       <Events>
+<<<<<<< HEAD
+=======
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTextField7MouseClicked"/>
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField7ActionPerformed"/>
       </Events>
     </Component>

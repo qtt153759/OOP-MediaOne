@@ -4,19 +4,64 @@
  */
 package Jframe;
 
+import Subject.ManageSubject;
+import Subject.Subject;
+<<<<<<< HEAD
+import javax.swing.JPanel;
+=======
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
+
 /**
  *
  * @author admin
  */
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/Jframe/SubjectPanel.java
 public class SubjectPanel extends javax.swing.JPanel {
+========
+public class AddNewSubject extends javax.swing.JPanel {
+>>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7:src/Jframe/AddNewSubject.java
+=======
+public class SubjectPanel extends javax.swing.JPanel {
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
 
     /**
      * Creates new form addquanlymonhoc
      */
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/Jframe/SubjectPanel.java
     public SubjectPanel() {
+========
+    ManageSubjectFrame manageSubjectFrame;
+
+    public AddNewSubject(ManageSubjectFrame manageSubjectFrame) {
+>>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7:src/Jframe/AddNewSubject.java
         initComponents();
+        System.out.println("text" + this.jFormattedTextField1.getText());
+        this.manageSubjectFrame = manageSubjectFrame;
+        this.manageSubjectFrame.printPane();
     }
 
+=======
+    Subject subject;
+    ManageSubjectFrame manageSubjectFrame;
+    public SubjectPanel(ManageSubjectFrame manageSubjectFrame,Subject subject) {
+        initComponents();
+        this.manageSubjectFrame=manageSubjectFrame;
+                this.subject=subject;
+
+        this.setDefault(subject);
+    }
+    public void setDefault(Subject subject){
+        this.jFormattedTextField1.setText(subject.name);
+        this.jFormattedTextField2.setText(subject.MaHP);
+        this.jFormattedTextField3.setText(""+subject.totalChapter);
+        this.jTextArea1.setText(subject.description);
+    }
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,10 +80,18 @@ public class SubjectPanel extends javax.swing.JPanel {
         jFormattedTextField3 = new javax.swing.JFormattedTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+<<<<<<< HEAD
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+
+=======
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
 
+        setPreferredSize(new java.awt.Dimension(450, 300));
+
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
         jTextField1.setBackground(new java.awt.Color(245, 245, 245));
         jTextField1.setText("Tên môn học:");
         jTextField1.setBorder(null);
@@ -61,6 +114,14 @@ public class SubjectPanel extends javax.swing.JPanel {
         jTextField4.setBorder(null);
 
         jFormattedTextField1.setText("Tên môn học");
+<<<<<<< HEAD
+=======
+        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField1ActionPerformed(evt);
+            }
+        });
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
 
         jFormattedTextField2.setText("Mã học phần");
         jFormattedTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -81,8 +142,19 @@ public class SubjectPanel extends javax.swing.JPanel {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+<<<<<<< HEAD
+        jTextField6.setBackground(new java.awt.Color(255, 30, 30));
+        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField6.setText("Tạo môn học");
+=======
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setText("Lưu");
+        jTextField5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField5MouseClicked(evt);
+            }
+        });
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
@@ -93,6 +165,12 @@ public class SubjectPanel extends javax.swing.JPanel {
         jTextField6.setForeground(new java.awt.Color(255, 255, 255));
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("Xóa môn học");
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
+        jTextField6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField6MouseClicked(evt);
+            }
+        });
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField6ActionPerformed(evt);
@@ -100,6 +178,11 @@ public class SubjectPanel extends javax.swing.JPanel {
         });
 
         jTextField7.setText("Hủy");
+        jTextField7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextField7MouseClicked(evt);
+            }
+        });
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
@@ -113,6 +196,24 @@ public class SubjectPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField1)
+                            .addComponent(jTextField2)
+                            .addComponent(jTextField3)
+                            .addComponent(jTextField4))
+                        .addGap(36, 36, 36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 301, Short.MAX_VALUE)
+                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jFormattedTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jTextField1)
                         .addComponent(jTextField2)
@@ -122,7 +223,7 @@ public class SubjectPanel extends javax.swing.JPanel {
                         .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jFormattedTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -130,6 +231,7 @@ public class SubjectPanel extends javax.swing.JPanel {
                         .addComponent(jFormattedTextField2)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -151,7 +253,15 @@ public class SubjectPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/Jframe/SubjectPanel.java
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+========
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+>>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7:src/Jframe/AddNewSubject.java
+=======
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -173,18 +283,85 @@ public class SubjectPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField3ActionPerformed
 
+<<<<<<< HEAD
+=======
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
+<<<<<<< HEAD
+
     }//GEN-LAST:event_jTextField6ActionPerformed
 
+    private void jTextField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MouseClicked
+        // TODO add your handling code here:
+        System.out.println("double text" + jFormattedTextField1.getText());
+        System.out.println("third text" + jFormattedTextField1.getText());
+        String name = this.jFormattedTextField1.getText();
+        String MaHP = this.jFormattedTextField2.getText();
+        int totalChapter = Integer.valueOf(this.jFormattedTextField3.getText());
+        String description = jTextArea1.getText();
+        ManageSubject.addSubject(name, MaHP, totalChapter, description);
+        this.manageSubjectFrame.createSubjectList();
+        this.manageSubjectFrame.printPane();
+        return;
+    }//GEN-LAST:event_jTextField6MouseClicked
+
+    private void jTextField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7MouseClicked
+        this.manageSubjectFrame.createAddSubjectForm();
+    }//GEN-LAST:event_jTextField7MouseClicked
+
+=======
+        
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
+
+    private void jTextField6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField6MouseClicked
+        System.out.println("delete");
+        ManageSubject.deleteSubject(this.subject);
+        manageSubjectFrame.createSubjectList();
+        manageSubjectFrame.createAddSubjectForm();
+    }//GEN-LAST:event_jTextField6MouseClicked
+
+    private void jTextField7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField7MouseClicked
+        this.setDefault(this.subject);
+    }//GEN-LAST:event_jTextField7MouseClicked
+
+    private void jTextField5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField5MouseClicked
+        try {
+            String name=this.jFormattedTextField1.getText();
+            String MaHP=this.jFormattedTextField2.getText();
+            int totalChapter=getNumeric(this.jFormattedTextField3.getText());
+            String description=this.jTextArea1.getText();
+            this.subject.updateSubject(name, MaHP, totalChapter, description);
+            JOptionPane.showMessageDialog(this, "Cập nhật môn học thành công");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, ex.getMessage());
+
+        }
+        
+    }//GEN-LAST:event_jTextField5MouseClicked
+    public static int getNumeric(String strNum) {
+    if (strNum == null) {
+        return 0;
+    }
+    try {
+        return Integer.parseInt(strNum);
+    } catch (NumberFormatException nfe) {
+        return 0;
+    }
+}
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFormattedTextField jFormattedTextField1;
@@ -196,7 +373,10 @@ public class SubjectPanel extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+<<<<<<< HEAD
+=======
     private javax.swing.JTextField jTextField5;
+>>>>>>> a65a0eb07e9834226ff36363741f67d8c97035f7
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
