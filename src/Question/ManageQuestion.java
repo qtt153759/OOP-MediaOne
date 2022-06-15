@@ -9,6 +9,7 @@ import Subject.Subject;
 import static Subject.ManageSubject.subjectList;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -64,8 +65,8 @@ public class ManageQuestion {
 
     public void mockMultipleQuestion() {
         HashMap<List<Choice>,List<Choice>> listOfListChoice = new HashMap<List<Choice>,List<Choice>>();
-        listOfListChoice = createMockChoice(listOfListChoice,"abc","bcd","def","jhi");
-        listOfListChoice=createMockChoice(listOfListChoice, "xyz", "mnp", "jqk", "tuv");
+        listOfListChoice = createMockChoice(listOfListChoice,Arrays.asList("abc","bcd","def","jhi"));
+        listOfListChoice=createMockChoice(listOfListChoice,Arrays.asList("xyz", "mnp", "jqk", "tuv"));
         Random rand = new Random();
         List<List<Choice>> keySet =new ArrayList<List<Choice>>(listOfListChoice.keySet());
         List<Choice> key=keySet.get(rand.nextInt(keySet.size()));
@@ -109,12 +110,12 @@ public class ManageQuestion {
         return;
     }
 
-    public HashMap<List<Choice>,List<Choice>> createMockChoice(HashMap<List<Choice>,List<Choice>> listOfListChoice,String a,String b,String c,String d) {
+    public HashMap<List<Choice>,List<Choice>> createMockChoice(HashMap<List<Choice>,List<Choice>> listOfListChoice,List<String> listOfChoice) {
         List<Choice> choice = new ArrayList<Choice>();
         List<Choice> answer = new ArrayList<Choice>();
         Random rand = new Random();
-        List<String> listChoiceSample=new ArrayList<String>(List.of(a,b,c,d));
-        for(int i=0;i<4;i++){
+        List<String> listChoiceSample=new ArrayList<String>(listOfChoice);
+        for(int i=0;i<listOfChoice.size();i++){
             System.out.println("checkk before size"+i+" laf "+listChoiceSample.size());
             String ans=listChoiceSample.get(rand.nextInt(listChoiceSample.size()));
             Choice ch=new Choice(i,ans);

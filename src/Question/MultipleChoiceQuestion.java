@@ -38,6 +38,9 @@ public class MultipleChoiceQuestion extends Question {
     public List<Choice> getChoice() {
         return this.choice;
     }
+    public List<Choice> getAnswerList(){
+        return this.answer;
+    }
 
 
     public void setAnswer(List<Choice> choiceList, List<Choice> answer) {

@@ -12,6 +12,7 @@ import Question.Question;
 import Subject.ManageSubject;
 import Subject.Subject;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -71,8 +72,8 @@ public class ExamMakerTest {
         Subject subject = manageSubject.getSubjectByCode("IT3310");
         //create mock choic
         HashMap<List<Choice>, List<Choice>> listOfListChoice = new HashMap<List<Choice>, List<Choice>>();
-        listOfListChoice = manageQuestion.createMockChoice(listOfListChoice, "abc", "bcd", "def", "jhi");
-        listOfListChoice = manageQuestion.createMockChoice(listOfListChoice, "xyz", "mnp", "jqk", "tuv");
+        listOfListChoice = manageQuestion.createMockChoice(listOfListChoice,Arrays.asList("abc", "bcd", "def", "jhi"));
+        listOfListChoice = manageQuestion.createMockChoice(listOfListChoice,Arrays.asList("xyz", "mnp", "jqk", "tuv"));
         Random rand = new Random();
         List<List<Choice>> keySet = new ArrayList<List<Choice>>(listOfListChoice.keySet());
         List<Choice> key = keySet.get(rand.nextInt(keySet.size()));

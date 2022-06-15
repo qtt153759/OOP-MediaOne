@@ -10,8 +10,8 @@ package Question;
  */
 public class Choice {
 
-    int order;
-    String answer;
+    public int order;
+    public String answer;
 
     public Choice(int order, String answer) {
         this.order = order;
@@ -22,7 +22,8 @@ public class Choice {
         //dịch chuyển chữ A theo bộ mã ascii 
         char alphabet = 'A';
         alphabet += order;
-        return alphabet + ": " + answer + " ... ";
+        return alphabet+". "+this.answer;
     }
+    
    
 }

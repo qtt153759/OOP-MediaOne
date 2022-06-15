@@ -4,6 +4,7 @@
  */
 package Jframe;
 
+import Question.ManageQuestion;
 import Subject.ManageSubject;
 
 /**
@@ -17,12 +18,16 @@ public class MainFrame extends javax.swing.JFrame {
      */
     ManageSubjectFrame manageSubjectFrame;
     ManageSubject manageSubject;
-    
+    ManageQuestionFrame manageQuestionFrame;
+    ManageQuestion manageQuestion;
     public MainFrame() {
         initComponents();
         manageSubject= new ManageSubject();
         manageSubject.mockSubjectList(1);
         manageSubject.printSubjectList();
+        manageQuestion=new ManageQuestion();
+        manageQuestion.mockQuestionList(3);
+    
     }
 
     /**
@@ -292,6 +297,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
+        manageQuestionFrame=new ManageQuestionFrame();
+        manageQuestionFrame.setVisible(true);
         System.out.print("Xây dựng đề thi");
     }//GEN-LAST:event_jLabel5MouseClicked
 
