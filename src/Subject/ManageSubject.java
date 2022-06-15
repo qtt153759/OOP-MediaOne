@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  * @author truong
  */
 public class ManageSubject {
-
+    
     public static List<Subject> subjectList;
 
     public ManageSubject() {
