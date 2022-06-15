@@ -47,7 +47,7 @@ public class ExamMakerTest {
         //test bài thi random 
         testRandom(manageExam, manageSubject, manageQuestion);
 //        //test bài thi thủ cong
-////        testManual(manageExam,manageSubject,manageQuestion);
+        testManual(manageExam,manageSubject,manageQuestion);
 
     }
 
@@ -62,14 +62,17 @@ public class ExamMakerTest {
                 System.out.println("**********&&&&&&&&&&&&&&&&&&&*********************");
 
         System.out.println("test remove");
-        manageQuestion.deleteQuestion(exam.questionList.get(2));
+//        manageQuestion.deleteQuestion(exam.questionList.get(2));
         exam.printExam();
     }
 
     public static void testManual(ManageExam manageExam, ManageSubject manageSubject, ManageQuestion manageQuestion) {
         System.out.println("**********************************************************");
         System.out.println("Test mock manual exam");
-        Subject subject = manageSubject.getSubjectByCode("IT3310");
+        
+        Subject subject = manageSubject.getSubjectByCode("IT1310");
+        System.out.println("IT1310 check");
+        subject.printSubject();
         //create mock choic
         HashMap<List<Choice>, List<Choice>> listOfListChoice = new HashMap<List<Choice>, List<Choice>>();
         listOfListChoice = manageQuestion.createMockChoice(listOfListChoice,Arrays.asList("abc", "bcd", "def", "jhi"));

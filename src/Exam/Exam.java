@@ -25,7 +25,7 @@ public class Exam {
     public Essay essay;
     public MultipleChoice multipleChoice;
     public List<Question> questionList;
-    Subject subject;
+    public Subject subject;
 
     public Exam(String name) {
         this.name = name;
@@ -34,7 +34,8 @@ public class Exam {
         this.questionList = new ArrayList<Question>();
     }
 
-    public void createShuffleExam(int level, int chapter, Subject subject) {
+    public List<Question> createShuffleExam(int total,int level, int chapter, Subject subject,int mulipleChoiceRatio) {
+        
         this.level = level;
         this.chapter = chapter;
         this.subject = subject;
@@ -42,13 +43,13 @@ public class Exam {
         //để tránh trường hợp khi remove câu hỏi trong Exam thì mất question trong ManageQuestion hoặc khi delete question trong  
         List<EssayQuestion> essayList = new ArrayList<EssayQuestion>((List) ManageQuestion.getQuestionList(level, chapter, subject, "ESSAY"));
         List<MultipleChoiceQuestion> multipleChoiceList = new ArrayList<MultipleChoiceQuestion>((List) ManageQuestion.getQuestionList(level, chapter, subject, "MULTIPLE_CHOICE"));
-        essayList = ManageQuestion.getShuffleQuestion((List) essayList, 5);
-        multipleChoiceList = ManageQuestion.getShuffleQuestion((List) multipleChoiceList, 5);
+        essayList = ManageQuestion.getShuffleQuestion((List) essayList, total-(total*mulipleChoiceRatio)/100);
+        multipleChoiceList = ManageQuestion.getShuffleQuestion((List) multipleChoiceList, (total*mulipleChoiceRatio)/100);
         this.essay.setEssayQuestion(essayList);
         this.multipleChoice.setMultipleChoiceQuestion(multipleChoiceList);
         setQuestionList();
         System.out.println("Exam Size list question: " + this.questionList.size() + " voi essay:" + this.essay.essayQuestion.size() + " va multi " + this.multipleChoice.multipleChoiceQuestion.size());
-        return;
+        return this.questionList;
     }
 
     public void addEssayQuestion(String question, String hint, int level, int chapter, Subject subject) {

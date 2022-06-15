@@ -4,6 +4,7 @@
  */
 package Jframe;
 
+import Exam.ManageExam;
 import Question.ManageQuestion;
 import Subject.ManageSubject;
 
@@ -20,14 +21,17 @@ public class MainFrame extends javax.swing.JFrame {
     ManageSubject manageSubject;
     ManageQuestionFrame manageQuestionFrame;
     ManageQuestion manageQuestion;
+    ManageExamFrame manageExamFrame;
+    ManageExam manageExam;
     public MainFrame() {
         initComponents();
         manageSubject= new ManageSubject();
         manageSubject.mockSubjectList(1);
         manageSubject.printSubjectList();
         manageQuestion=new ManageQuestion();
-        manageQuestion.mockQuestionList(3);
-    
+        manageQuestion.mockQuestionList(1);
+        manageExam=new ManageExam();
+        manageExam.createMockExam(1);
     }
 
     /**
@@ -299,12 +303,11 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         manageQuestionFrame=new ManageQuestionFrame();
         manageQuestionFrame.setVisible(true);
-        System.out.print("Xây dựng đề thi");
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        // TODO add your handling code here:
-        System.out.print("Làm bài thi");
+        manageExamFrame=new ManageExamFrame();
+        manageExamFrame.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked

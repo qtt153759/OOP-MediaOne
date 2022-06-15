@@ -17,7 +17,7 @@ import java.util.Random;
  */
 public class ManageExam {
 
-    public List<Exam> examList;
+    public static List<Exam> examList;
 
     public ManageExam() {
         this.examList = new ArrayList<Exam>();
@@ -28,7 +28,7 @@ public class ManageExam {
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         System.out.println("create " + name + " " + level + " " + " " + chapter + " " + subject.name + " " + isShuffle);
         if (isShuffle) {
-            exam.createShuffleExam(level, chapter, subject);
+            exam.createShuffleExam(20,level, chapter, subject,50);
         }
         examList.add(exam);
         return;

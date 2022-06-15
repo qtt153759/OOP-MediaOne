@@ -46,20 +46,20 @@ public class ManageQuestion {
     }
 
     public void mockEssayQuestion() {
-        this.essayQuestionList.add(new EssayQuestion("how old are you", "i'm fine, thanks", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("Bye Bye", "i'm eight", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("What is your name", "i'm truong", 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("How are you", "i'm fine, thanks", 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("Nothing gonna change my love for you", "i'm chirstan", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("Good morning", "moring good", 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("Good afternoon", "afternoon good", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("God bless you", "Dear sir", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("Hello fron the out the side", "Hello everyone", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("Everyday i love you", "nothing at all", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("Avenger", "Caption america", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("What do you want", "i want more", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("This is a table", "thatle", 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
-        this.essayQuestionList.add(new EssayQuestion("how do you do", "i'm police", 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 1", "Câu trả lời tự luận 1", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 2", "Câu trả lời tự luận 2", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 3", "Câu trả lời tự luận 3", 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 4", "Câu trả lời tự luận 4", 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 5", "Câu trả lời tự luận 5", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 6", "Câu trả lời tự luận 6", 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 7", "Câu trả lời tự luận 7", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 8", "Câu trả lời tự luận 8", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 9", "Câu trả lời tự luận 9", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 10", "Câu trả lời tự luận 10", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 11", "Câu trả lời tự luận 11", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 12", "Câu trả lời tự luận 12", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 13", "Câu trả lời tự luận 13", 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.essayQuestionList.add(new EssayQuestion("Câu tự luân 14", "Câu trả lời tự luận 14", 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
 
     }
 
@@ -71,40 +71,40 @@ public class ManageQuestion {
         List<List<Choice>> keySet =new ArrayList<List<Choice>>(listOfListChoice.keySet());
         List<Choice> key=keySet.get(rand.nextInt(keySet.size()));
         List<Choice> val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how old are you", key,val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 1", key,val, 1, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("What time is it", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 2", key, val, 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Do you have launch", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 3", key, val, 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Hello from the out the side", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 4", key, val, 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how old are you", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 5", key, val, 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("how do you like that", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 6", key, val, 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("let her go", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 7", key, val, 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Photography", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 8", key, val, 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Among us", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 9", key, val, 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Landmark", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 10", key, val, 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("international company", key, val, 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 11", key, val, 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
-        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("solution architect", key, val, 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
+        this.multipleChoiceQuestionList.add(new MultipleChoiceQuestion("Câu trắc nghiệm 12", key, val, 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size()))));
         key=keySet.get(rand.nextInt(keySet.size()));
         val=listOfListChoice.get(key);
         return;
@@ -137,6 +137,7 @@ public class ManageQuestion {
     }
 //leve=5,chapter=4,subject 10000=>500 50
     public static List<Question> getShuffleQuestion(List<Question> questionList, int numberQuestion) {
+        System.out.println("Number quest"+numberQuestion);
         //nếu số câu hỏi mà lớn hơn tổng số questionList thì numberQuestion=questionList;
         numberQuestion = questionList.size() < numberQuestion ? questionList.size() : numberQuestion;
         List<Question> tmpQuestions = new ArrayList<Question>(questionList);
