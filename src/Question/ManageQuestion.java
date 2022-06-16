@@ -148,10 +148,10 @@ public class ManageQuestion {
         return shuffleQuestions;
     }
 
-    public void setQuestionList() {
-        this.questionList = new ArrayList<Question>();
-        this.questionList.addAll(this.essayQuestionList);
-        this.questionList.addAll(this.multipleChoiceQuestionList);
+    public static void setQuestionList() {
+        ManageQuestion.questionList = new ArrayList<Question>();
+        ManageQuestion.questionList.addAll(ManageQuestion.essayQuestionList);
+        ManageQuestion.questionList.addAll(ManageQuestion.multipleChoiceQuestionList);
         return;
     }
 
@@ -224,6 +224,7 @@ public class ManageQuestion {
     
     public static void addEssayQuestion(String question, String hint, int level, int chapter, Subject subject){
         ManageQuestion.essayQuestionList.add(new EssayQuestion(question, hint, level, chapter, subject));
+        setQuestionList();
         return;
     }
     
