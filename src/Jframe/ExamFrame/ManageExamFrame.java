@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Jframe;
+package Jframe.ExamFrame;
 
 import Exam.Exam;
 import Exam.ManageExam;
@@ -28,6 +28,7 @@ public class ManageExamFrame extends javax.swing.JFrame {
      */
     List<Exam> examList;
     CreateAutomaticExamFrame createAutoExamFrame;
+    CreateNotAutomaticExam createNotAutoExamFrame;
     public ManageExamFrame() {
         initComponents();
         manageExamPanel=new JPanel();
@@ -49,12 +50,21 @@ public class ManageExamFrame extends javax.swing.JFrame {
             tmpPanel.add(tmpLabel);   
             tmpPanel.setSize(200,200);
             tmpPanel.setBackground(Color.red);
+            final Exam tmpExam=this.examList.get(i);
+            tmpPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    openExam(tmpExam);
+                }
+            });
             this.manageExamPanel.add(tmpPanel);
         }
         jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         this.jScrollPane1.setViewportView(manageExamPanel);
+    }
+    public void openExam(Exam tmpExam){
+        new CreateNotAutomaticExam(this,tmpExam).setVisible(true);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -215,6 +225,9 @@ public class ManageExamFrame extends javax.swing.JFrame {
             createAutoExamFrame.setVisible(true);
         } else if (x == 1) {
             System.out.println("Manual exam");
+            String examName = JOptionPane.showInputDialog("Exam name?");
+            Exam exam = new Exam(examName);
+            openExam(exam);  
         } 
     }//GEN-LAST:event_jTextField4MouseClicked
 

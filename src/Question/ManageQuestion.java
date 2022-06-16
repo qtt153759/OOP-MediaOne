@@ -168,7 +168,7 @@ public class ManageQuestion {
             case "ESSAY":
                 tmpQuestionList.addAll(ManageQuestion.essayQuestionList);
                 break;
-            default:
+            case "BOTH":
                 tmpQuestionList.addAll(ManageQuestion.essayQuestionList);
                 tmpQuestionList.addAll(ManageQuestion.multipleChoiceQuestionList);
                 break;

@@ -4,7 +4,7 @@
  */
 package ExamMaker;
 
-import Jframe.MainFrame;
+import Jframe.MainFrame.MainFrame;
 
 /**
  *

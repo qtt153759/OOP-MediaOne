@@ -54,10 +54,10 @@ public class ManageExam {
 
     public void createMockExam(int repeat) {
         for (int i = 0; i < repeat; i++) {
-            createExam("Thi giua ky attt", 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
-            createExam("Thi cuoi ky oop", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
-            createExam("Thi giua ky csdl", 6, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
-            createExam("Thi cuoi ky soict", 5, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
+            createExam("Thi giua ky attt", 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
+            createExam("Thi cuoi ky oop", 1, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
+            createExam("Thi giua ky csdl", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
+            createExam("Thi cuoi ky soict", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
         }
         return;
     }
