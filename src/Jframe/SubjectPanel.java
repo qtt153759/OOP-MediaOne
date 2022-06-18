@@ -24,7 +24,7 @@ public class SubjectPanel extends javax.swing.JPanel {
     public SubjectPanel(ManageSubjectFrame manageSubjectFrame,Subject subject) {
         initComponents();
         this.manageSubjectFrame=manageSubjectFrame;
-                this.subject=subject;
+        this.subject=subject;
 
         this.setDefault(subject);
     }

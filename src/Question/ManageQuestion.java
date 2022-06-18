@@ -209,13 +209,13 @@ public class ManageQuestion {
             }
         }
     }   
-    public void deleteQuestion(Question quest){
+    public static void deleteQuestion(Question quest){
         if (quest instanceof EssayQuestion) {
             System.out.println("remove essay");
-            this.essayQuestionList.remove(quest);
+            ManageQuestion.essayQuestionList.remove(quest);
         } else if (quest instanceof MultipleChoiceQuestion) {
             System.out.println("remove multiple");
-            this.multipleChoiceQuestionList.remove(quest);
+            ManageQuestion.multipleChoiceQuestionList.remove(quest);
         } else {
         }
         setQuestionList();
@@ -224,6 +224,12 @@ public class ManageQuestion {
     
     public static void addEssayQuestion(String question, String hint, int level, int chapter, Subject subject){
         ManageQuestion.essayQuestionList.add(new EssayQuestion(question, hint, level, chapter, subject));
+        setQuestionList();
+        return;
+    }
+    
+    public static void addMultipleChoiceQuestion(String question, List<Choice> choice,  List<Choice> answer, int level, int chapter, Subject subject){
+        ManageQuestion.multipleChoiceQuestionList.add(new MultipleChoiceQuestion(question, choice, answer, level, chapter, subject));
         setQuestionList();
         return;
     }
