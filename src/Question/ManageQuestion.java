@@ -26,7 +26,6 @@ public class ManageQuestion {
     public static List<Question> questionList;
     public static List<MultipleChoiceQuestion> multipleChoiceQuestionList;
     public static List<EssayQuestion> essayQuestionList;
-
     public ManageQuestion() {
         this.questionList = new ArrayList<Question>();
         this.essayQuestionList = new ArrayList<EssayQuestion>();
@@ -150,10 +149,10 @@ public class ManageQuestion {
         return shuffleQuestions;
     }
 
-    public void setQuestionList() {
-        this.questionList = new ArrayList<Question>();
-        this.questionList.addAll(this.essayQuestionList);
-        this.questionList.addAll(this.multipleChoiceQuestionList);
+    public static void setQuestionList() {
+        ManageQuestion.questionList = new ArrayList<Question>();
+        ManageQuestion.questionList.addAll(ManageQuestion.essayQuestionList);
+        ManageQuestion.questionList.addAll(ManageQuestion.multipleChoiceQuestionList);
         return;
     }
 
@@ -210,19 +209,32 @@ public class ManageQuestion {
                 System.out.println("======");
             }
         }
-    }
-    public void deleteQuestion(Question quest){
-         if (quest instanceof EssayQuestion) {
+    }   
+    public static void deleteQuestion(Question quest){
+        if (quest instanceof EssayQuestion) {
             System.out.println("remove essay");
-            this.essayQuestionList.remove(quest);
+            ManageQuestion.essayQuestionList.remove(quest);
         } else if (quest instanceof MultipleChoiceQuestion) {
             System.out.println("remove multiple");
-            this.multipleChoiceQuestionList.remove(quest);
+            ManageQuestion.multipleChoiceQuestionList.remove(quest);
         } else {
         }
         setQuestionList();
         return;
     }
+    
+    public static void addEssayQuestion(String question, String hint, int level, int chapter, Subject subject){
+        ManageQuestion.essayQuestionList.add(new EssayQuestion(question, hint, level, chapter, subject));
+        setQuestionList();
+        return;
+    }
+    
+    public static void addMultipleChoiceQuestion(String question, List<Choice> choice,  List<Choice> answer, int level, int chapter, Subject subject){
+        ManageQuestion.multipleChoiceQuestionList.add(new MultipleChoiceQuestion(question, choice, answer, level, chapter, subject));
+        setQuestionList();
+        return;
+    }
+    
     public Question getQuestionById(int id){
         Question result =questionList.stream().filter(quest -> quest.id == id).findFirst().orElse(null);
         if(result!=null){

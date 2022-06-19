@@ -10,6 +10,7 @@ import Question.Choice;
 import Question.ManageQuestion;
 import Question.Question;
 import Subject.ManageSubject;
+import static Subject.ManageSubject.getSubjectByCode;
 import Subject.Subject;
 import java.util.ArrayList;
 import java.util.Arrays;
