@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
  * @author truong
  */
 public class ManageSubject {
-
+    
     public static List<Subject> subjectList;
 
     public ManageSubject() {
@@ -42,7 +42,18 @@ public class ManageSubject {
     }
 
     public static Subject getSubjectByCode(String MaHp) {
-        Subject result = ManageSubject.subjectList.stream().filter(subject -> subject.MaHP == MaHp).findFirst().orElse(null);
+       
+        System.out.println("MsHp"+MaHp);
+        for(int i=0;i<ManageSubject.subjectList.size();i++){
+                            System.out.println("tmp"+i+": "+ManageSubject.subjectList.get(i).MaHP);
+
+            if(ManageSubject.subjectList.get(i).MaHP.equals(MaHp)){
+                Subject tmpSubject=ManageSubject.subjectList.get(i);
+                System.out.println("finded"+tmpSubject.MaHP);
+            }
+        }
+        Subject result = ManageSubject.subjectList.stream().filter(subject -> subject.MaHP.equals(MaHp)).findFirst().orElse(null);
+        
         System.out.println("get subjectByCode Mahp" + result.MaHP);
         return result;
     }

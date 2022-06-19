@@ -33,5 +33,4 @@ public class EssayQuestion extends Question {
     public void setAnswer(String hint) {
         this.hint = hint;
     }
-
 }
