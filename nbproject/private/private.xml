@@ -2,22 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/ExamMaker/ExamMaker.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Jframe/ManageQuestionFrame.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Exam/ManageExam.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Exam/Exam.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Question/IQuestion.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Subject/ManageSubject.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/ExamMaker/ExamMakerTest.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Jframe/AddNewQuestion.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Jframe/CreateAutomaticExamFrame.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Jframe/ManageExamFrame.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Question/Question.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Jframe/MainFrame.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Question/MultipleChoiceQuestion.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Jframe/QuestionPanel.java</file>
-            <file>file:/home/truong/NetBeansProjects/ExamMaker/src/Question/EssayQuestion.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
