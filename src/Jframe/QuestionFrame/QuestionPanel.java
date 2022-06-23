@@ -134,6 +134,15 @@ public class QuestionPanel extends javax.swing.JPanel {
             String newAnswer = JOptionPane.showInputDialog("update choice?");
             selectedChoice.answer = newAnswer;
         } else if (x == 1) {
+            int z = 0;
+            for (int i = 0; i<choiceList.size(); i++){
+                if (z == 1){
+                    choiceList.get(i).order-= 1;
+                }
+                if (selectedChoice.order == i){
+                    z = 1;
+                }
+            }
             this.choiceList.remove(selectedChoice);
             this.answerList.remove(selectedChoice);
         } else if (x == 2) {

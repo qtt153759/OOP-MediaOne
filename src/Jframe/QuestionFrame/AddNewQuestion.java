@@ -102,10 +102,42 @@ public class AddNewQuestion extends javax.swing.JPanel {
             panel.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
 //                    setCurrentPanel(evt, selectedQuestion);
+                      handleSelectedChoice(evt, selectedChoice);
                 }
             });
             renderChoiceList(selectedChoice, panel);
         }
+    }
+
+    public void handleSelectedChoice(java.awt.event.MouseEvent evt, Choice selectedChoice) {
+        String[] options = {"update", "delete", "set answer"};
+        int x = JOptionPane.showOptionDialog(null, "Select action you want to do with answer " + selectedChoice.answer,
+                "Click a button",
+                JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+        if (x == 0) {
+            String newAnswer = JOptionPane.showInputDialog("update choice?");
+            selectedChoice.answer = newAnswer;
+        } else if (x == 1) {
+            int z = 0;
+            for (int i = 0; i<choiceList.size(); i++){
+                if (z == 1){
+                    choiceList.get(i).order-= 1;
+                }
+                if (selectedChoice.order == i){
+                    z = 1;
+                }
+            }
+            this.choiceList.remove(selectedChoice);
+            this.answerList.remove(selectedChoice);
+        } else if (x == 2) {
+            Choice result = this.answerList.stream().filter(choice -> choice == selectedChoice).findFirst().orElse(null);
+            if (result == null) {
+                this.answerList.add(selectedChoice);
+            } else {
+                this.answerList.remove(selectedChoice);
+            }
+        }
+        setMultipleAnswer();
     }
      
     public Choice getChoiceByName(String answer){
