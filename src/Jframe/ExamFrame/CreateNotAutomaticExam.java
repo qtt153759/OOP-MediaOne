@@ -48,8 +48,8 @@ public class CreateNotAutomaticExam extends javax.swing.JFrame {
         this.exam=exam;
         this.manageExamFrame=manageExamFrame;
         this.suitableQuestionList=new ArrayList<Question>();
-        this.jSpinner2.setModel(new SpinnerNumberModel(1, 1, 10, 1));
-        this.jSpinner3.setModel(new SpinnerNumberModel(1, 1, 10, 1));
+        this.jSpinner2.setModel(new SpinnerNumberModel(0, 1, 10, 1));
+        this.jSpinner3.setModel(new SpinnerNumberModel(0, 1, 10, 1));
         this.jComboBox1.removeAllItems();
         for (int i = 0; i < ManageSubject.subjectList.size(); i++) {
             this.jComboBox1.addItem(ManageSubject.subjectList.get(i).MaHP);
@@ -60,7 +60,11 @@ public class CreateNotAutomaticExam extends javax.swing.JFrame {
         this.questionList=exam.questionList;
         this.jSpinner2.setValue(this.exam.level);
         this.jSpinner3.setValue(this.exam.chapter);
-        this.jComboBox1.setSelectedItem(this.exam.subject.MaHP);
+        if(this.exam.subject!=null){
+           this.jComboBox1.setSelectedItem(this.exam.subject.MaHP);
+        }else{
+           this.jComboBox1.setSelectedItem(ManageSubject.subjectList.get(0).MaHP);
+        }
         setQuestionListPanel();
     }
     // Suitable Question List

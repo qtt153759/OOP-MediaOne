@@ -254,7 +254,6 @@ public class SubjectPanel extends javax.swing.JPanel {
             this.subject.updateSubject(name, MaHP, totalChapter, description);
             JOptionPane.showMessageDialog(this, "Cập nhật môn học thành công");
         } catch (Exception ex) {
-            ex.printStackTrace();
             JOptionPane.showMessageDialog(this, ex.getMessage());
 
         }
