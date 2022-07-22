@@ -20,14 +20,15 @@ public class ManageSubject {
 
     public ManageSubject() {
         this.subjectList = new ArrayList<Subject>();
+        System.out.println("Khởi tạo Manage Subject");
     }
 
     public void mockSubjectList(int repeat) {
         for (int i = 0; i < repeat; i++) {
-            this.subjectList.add(new Subject("oop", "IT3310", 10, "cho biet"));
-            this.subjectList.add(new Subject("ktlt", "IT2110", 10, "khong biet"));
-            this.subjectList.add(new Subject("mmt", "IT3550", 10, "ai biet"));
-            this.subjectList.add(new Subject("csdl", "IT1310", 10, "toi biet"));
+            this.subjectList.add(new Subject("oop", "IT3310", 10, "Lập trình hướng đối tượng"));
+            this.subjectList.add(new Subject("ktlt", "IT2110", 10, "Kỹ thuật lập trình"));
+            this.subjectList.add(new Subject("mmt", "IT3550", 10, "Mạng máy tính"));
+            this.subjectList.add(new Subject("csdl", "IT1310", 10, "Cơ sở dữ liệu"));
         }
         return;
     }
@@ -42,16 +43,6 @@ public class ManageSubject {
     }
 
     public static Subject getSubjectByCode(String MaHp) {
-       
-        System.out.println("MsHp"+MaHp);
-        for(int i=0;i<ManageSubject.subjectList.size();i++){
-                            System.out.println("tmp"+i+": "+ManageSubject.subjectList.get(i).MaHP);
-
-            if(ManageSubject.subjectList.get(i).MaHP.equals(MaHp)){
-                Subject tmpSubject=ManageSubject.subjectList.get(i);
-                System.out.println("finded"+tmpSubject.MaHP);
-            }
-        }
         Subject result = ManageSubject.subjectList.stream().filter(subject -> subject.MaHP.equals(MaHp)).findFirst().orElse(null);
         
         System.out.println("get subjectByCode Mahp" + result.MaHP);
@@ -63,11 +54,11 @@ public class ManageSubject {
     }
 
     public void printSubjectList() {
-        System.out.println("SubjectList" + this.subjectList.size());
+        System.out.println("SubjectList size: " + this.subjectList.size());
         if (subjectList.size() > 0) {
             for (Subject subject : this.subjectList) {
                 subject.printSubject();
-                System.out.println("======");
+                System.out.println("=============");
             }
         }
     }

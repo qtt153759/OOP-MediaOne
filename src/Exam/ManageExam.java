@@ -21,12 +21,13 @@ public class ManageExam {
 
     public ManageExam() {
         this.examList = new ArrayList<Exam>();
+        System.out.println("Khởi tạp manage exam");
     }
 //isShuffle  true là tạo bài thi tự động, false là tạo thủ công
     public void createExam(String name, int level, int chapter, Subject subject, boolean isShuffle) {
         Exam exam = new Exam(name);
         System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-        System.out.println("create " + name + " " + level + " " + " " + chapter + " " + subject.name + " " + isShuffle);
+        System.out.println("create " + name + " " + level + " " + " " + chapter + " " + subject.name + " " + isShuffle+" 20 total "+ " 50%");
         if (isShuffle) {
             exam.createShuffleExam(20,level, chapter, subject,50);
         }
@@ -55,10 +56,11 @@ public class ManageExam {
     public void createMockExam(int repeat) {
         for (int i = 0; i < repeat; i++) {
             createExam("Thi giua ky attt", 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
-            createExam("Thi cuoi ky oop", 1, 2, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
+            createExam("Thi cuoi ky oop", 1, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
             createExam("Thi giua ky csdl", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
             createExam("Thi cuoi ky soict", 2, 3, ManageSubject.subjectList.get(new Random().nextInt(ManageSubject.subjectList.size())), true);
         }
+        System.out.println("Exam list size after create random "+ this.examList.size());
         return;
     }
 }

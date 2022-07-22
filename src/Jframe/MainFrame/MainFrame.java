@@ -32,7 +32,7 @@ public class MainFrame extends javax.swing.JFrame {
         manageSubject.mockSubjectList(1);
         manageSubject.printSubjectList();
         manageQuestion=new ManageQuestion();
-        manageQuestion.mockQuestionList(1);
+        manageQuestion.mockQuestionList(5);
         manageExam=new ManageExam();
         manageExam.createMockExam(1);
     }

@@ -49,8 +49,8 @@ public abstract class Question implements IQuestion {
     ;
     @Override
     public void printQuestion() {
-        System.out.println("Question " + id + " : " + "( level: " + this.level + " ,chapter: " + this.chapter + " ,subject: " + this.subject.MaHP + " ) " + this.question);
-        System.out.println(getAnswer());
+        System.out.println("(id: "+id +",level: " + this.level + " ,chapter: " + this.chapter + " ,subject: " + this.subject.MaHP + " ) " + this.question);
+        System.out.println(this.getAnswer());
     }
 
     ;

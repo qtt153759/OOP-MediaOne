@@ -28,6 +28,7 @@ public class ExamMakerTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("***********************************************************");
         //Tạo list các subject
         System.out.println("Test mock subject");
         ManageSubject manageSubject = new ManageSubject();
@@ -39,9 +40,8 @@ public class ExamMakerTest {
         ManageQuestion manageQuestion = new ManageQuestion();
         manageQuestion.mockQuestionList(3);
         manageQuestion.printQuestionList();
-        System.out.println("Size list question: " + ManageQuestion.questionList.size() + " voi essay:" + ManageQuestion.essayQuestionList.size() + " va multi " + ManageQuestion.multipleChoiceQuestionList.size());
 
-        //tạo list các bài thi tu dong
+        //tạo list các bài thi 
         System.out.println("**********************************************************");
         System.out.println("Test mock random exam");
         ManageExam manageExam = new ManageExam();
@@ -54,16 +54,16 @@ public class ExamMakerTest {
 
     public static void testRandom(ManageExam manageExam, ManageSubject manageSubject, ManageQuestion manageQuestion) {
         System.out.println("**********************************************************");
-        System.out.println("test random");
+        System.out.println("test Tạo bài thi random ");
         manageExam.createMockExam(1);
-        System.out.println("****145924350723510579213***********************");
-        System.out.println("check single exam");
+        System.out.println("**********");
+        System.out.println("test get exam thi cuoi ky soict");
         Exam exam = manageExam.getExamByName("Thi cuoi ky soict");
         exam.printExam();
-                System.out.println("**********&&&&&&&&&&&&&&&&&&&*********************");
+        System.out.println("**********&&&&&&&&&&&&&&&&&&&*********************");
 
-        System.out.println("test remove");
-//        manageQuestion.deleteQuestion(exam.questionList.get(2));
+        System.out.println("test remove in manage question");
+        manageQuestion.deleteQuestion(exam.questionList.get(2));
         exam.printExam();
     }
 
@@ -72,7 +72,6 @@ public class ExamMakerTest {
         System.out.println("Test mock manual exam");
         
         Subject subject = manageSubject.getSubjectByCode("IT1310");
-        System.out.println("IT1310 check");
         subject.printSubject();
         //create mock choic
         HashMap<List<Choice>, List<Choice>> listOfListChoice = new HashMap<List<Choice>, List<Choice>>();
@@ -83,30 +82,32 @@ public class ExamMakerTest {
         List<Choice> key = keySet.get(rand.nextInt(keySet.size()));
         List<Choice> val = listOfListChoice.get(key);
 
-        manageExam.createExam("hanoi", 6, 2, subject, false);
-        Exam exam = manageExam.getExamByName("hanoi");
-        exam.addEssayQuestion("thu do", "thang long", 3, 2, subject);
-        exam.addEssayQuestion("hochiming", "saigoi", 4, 1, subject);
+        manageExam.createExam("ky thi thpt quoc gia", 2, 3, subject, false);
+        Exam exam = manageExam.getExamByName("ky thi thpt quoc gia");
+        exam.addEssayQuestion("Câu hỏi tự luận kỳ thi thpt qg1", "Gợi ý tự luận kỳ thi thpt qg1", 1, 3, subject);
+        exam.addEssayQuestion("Câu hỏi tự luận kỳ thi thpt qg2", "Gợi ý tự luận kỳ thi thpt qg2", 2, 3, subject);
 
-        exam.addMultipleChoiceQuestion("danang", key, val, 0, 0, subject);
+        exam.addMultipleChoiceQuestion("Cau hoi trac nghiem ky thi thpt qg1", key, val, 2, 3, subject);
         System.out.println("**********************************************************");
         System.out.println("Check size list");
-        System.out.println("Size list subject: " + ManageSubject.subjectList.size());
-        System.out.println("Size list question: " + ManageQuestion.questionList.size() + " voi essay:" + ManageQuestion.essayQuestionList.size() + " va multi " + ManageQuestion.multipleChoiceQuestionList.size());
         System.out.println("Size list exam: " + manageExam.examList.size());
         System.out.println("**********************************************************");
-        System.out.println("exam");
         exam.printExam();
-        System.out.println(")))))))))))))))))))))))))");
-        Exam deletedExam = manageExam.getExamByName("hanoi");
-        manageExam.deleteExam(deletedExam);
-        Question removeQuest = exam.questionList.get(2);
+        System.out.println("**********************************************************");
+        System.out.println("Test remove question in exam");
+        Question removeQuest = exam.questionList.get(1);
         exam.removeQuestion(removeQuest);
         exam.printExam();
-//        System.out.println("(((((((((((((((((");
-//        Exam hanoi=manageExam.getExamByName("hanoi");
-//        if(hanoi==null){
-//            System.out.println("is deleted");
-//        }
+        System.out.println("**********************************************************");
+        System.out.println("Test remove  exam in manage exam");
+        System.out.println("Exam list size before delete "+ manageExam.examList.size());
+        manageExam.deleteExam(exam);
+        System.out.println("Exam list size after delete "+ manageExam.examList.size());
+
+        System.out.println("**********************************************************");
+        Exam thptqg=manageExam.getExamByName("ky thi thpt quoc gia");
+        if(thptqg==null){
+            System.out.println("is deleted");
+        }
     }
 }
