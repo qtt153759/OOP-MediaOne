@@ -70,8 +70,9 @@ public class Exam {
 
     public void printExam() {
         System.out.println("exam-name: " + this.name + " level: " + this.level + " chapter: " + this.chapter + " size" + this.questionList.size());
-        for (Question quest : this.questionList) {
-            quest.printQuestion();
+        for (int i=0;i<this.questionList.size();i++) {
+            System.out.print("Question " + i+" : ");
+            this.questionList.get(i).printQuestion();
         }
     }
 
@@ -79,11 +80,10 @@ public class Exam {
 //        questionList.remove(quest);
         if (quest instanceof EssayQuestion) {
             System.out.println("remove essay");
+            this.essay.essayQuestion.remove(quest);
         } else if (quest instanceof MultipleChoiceQuestion) {
             System.out.println("remove multiple");
             this.multipleChoice.multipleChoiceQuestion.remove(quest);
-        } else {
-            this.essay.essayQuestion.remove(quest);
         }
         setQuestionList();
         return;

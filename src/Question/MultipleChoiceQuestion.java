@@ -24,13 +24,13 @@ public class MultipleChoiceQuestion extends Question {
 
     @Override
     public String getAnswer() {
-        String listChoice = "Choice list: ";
-        String listAnsw = "\nMulti answer is ";
+        String listChoice = "Options : ";
+        String listAnsw = "\nAnswers : ";
         for (Choice choi : choice) {
-            listChoice += choi.getChoice();
+            listChoice += choi.getChoice()+" - ";
         }
         for( Choice answ:answer){
-            listAnsw+=answ.getChoice();
+            listAnsw+=answ.getChoice()+" - ";
         }
         return listChoice + listAnsw; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
