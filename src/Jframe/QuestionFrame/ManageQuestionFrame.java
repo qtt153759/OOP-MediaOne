@@ -133,7 +133,7 @@ public class ManageQuestionFrame extends javax.swing.JFrame {
         jTextField6.setBackground(new java.awt.Color(245, 245, 245));
         jTextField6.setForeground(new java.awt.Color(30, 144, 255));
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField6.setText("Thêm môn học");
+        jTextField6.setText("Thêm câu hỏi");
         jTextField6.setBorder(null);
         jTextField6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

@@ -47,5 +47,5 @@ public class MultipleChoiceQuestion extends Question {
         this.choice = choiceList;
         this.answer = answer;
     }
-
+    
 }
