@@ -30,8 +30,20 @@ public abstract class Question implements IQuestion {
         this.id = counter.incrementAndGet();
     }
 
-    public void setAnswer() {
-
+    public void setQuestion(String question){
+        this.question = question;
+    }
+    
+    public void setChapter(int chapter){
+        this.chapter = chapter;
+    }
+    
+    public void setLevel(int level){
+        this.level = level;
+    }
+    
+    public void setSubject(Subject subject){
+        this.subject = subject;
     }
 
     ;
@@ -54,6 +66,5 @@ public abstract class Question implements IQuestion {
     ;
     public int getChapter() {
         return this.chapter;
-    }
-;
+    }    
 }
